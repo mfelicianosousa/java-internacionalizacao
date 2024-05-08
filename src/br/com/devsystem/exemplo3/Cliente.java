@@ -250,14 +250,17 @@ public class Cliente extends javax.swing.JFrame {
 
     private void cmbLanguageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbLanguageActionPerformed
         String selected_item = (String) cmbLanguage.getSelectedItem();
+        String[] language_country = selected_item.split("_");
+        language_locale(language_country[0],language_country[1]);
+        
         // JOptionPane.showMessageDialog(null, selected_item);
-        if (selected_item.equals("pt_BR")){
-            language_locale("pt","BR");
-        } else if (selected_item.equals("en_US")){
-            language_locale("en","US");
-        } else if (selected_item.equals("es_ES")){
-            language_locale("es","ES");
-        }
+//        if (selected_item.equals("pt_BR")){
+//            language_locale("pt","BR");
+//        } else if (selected_item.equals("en_US")){
+//            language_locale("en","US");
+//        } else if (selected_item.equals("es_ES")){
+//            language_locale("es","ES");
+//        }
     }//GEN-LAST:event_cmbLanguageActionPerformed
 
     /**
